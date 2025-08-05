@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "GitHub Size Estimate",
+    "version": "1.0.0",
+    "description": "Shows the size of GitHub repositories on their pages.",
+    "permissions": [
+        "storage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://github.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://github.com/*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
