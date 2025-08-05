@@ -4,7 +4,7 @@ Get an **instant estimate** of any public GitHub repository’s size **without c
 
 [![Watch the demo](https://img.youtube.com/vi/WuEGCarQ97w/hqdefault.jpg)](https://www.youtube.com/watch?v=WuEGCarQ97w)
 
-🎥 **Click the image above** to watch a short demo video.
+**Click the image above** to watch a short demo video.
 
 ---
 
