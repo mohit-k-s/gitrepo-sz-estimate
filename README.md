@@ -12,6 +12,7 @@ Get an **instant estimate** of any public GitHub repository’s size **without c
 
 1. Enable **Developer Mode** in your Chrome extensions page.
 2. Click **“Load Unpacked”** and select the extension directory.
-3. Navigate to any GitHub repo page — the size estimate appears automatically.
+3. Navigate to any GitHub repo page.
+4. The size appears on top right
 
 ---
