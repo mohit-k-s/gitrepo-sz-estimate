@@ -13,6 +13,21 @@
         return data.size ? data.size : null;
     }
 
+    function formatRepoSize(sizeInKB) {
+        if (sizeInKB < 1024) {
+            return `Repo Size: ${sizeInKB.toFixed(1)} KB`;
+        }
+
+        const sizeInMB = sizeInKB / 1024;
+        if (sizeInMB < 1024) {
+            return `Repo Size: ${sizeInMB.toFixed(1)} MB`;
+        }
+
+        const sizeInGB = sizeInMB / 1024;
+        return `Repo Size: ${sizeInGB.toFixed(1)} GB`;
+        }
+
+
     function insertSizeElement(size) {
         // Remove existing element if present
         const existing = document.getElementById('github-size-estimate');
@@ -35,15 +50,7 @@
         sizeElem.style.fontWeight = 'bold';
         sizeElem.style.zIndex = 1000;
 
-        // Format size appropriately
-        const sizeInMB = size / 1024;
-        let displayText;
-        if (sizeInMB >= 1024) {
-            displayText = `Repo Size: ${(sizeInMB / 1024).toFixed(1)} GB`;
-        } else {
-            displayText = `Repo Size: ${sizeInMB.toFixed(1)} MB`;
-        }
-        sizeElem.textContent = displayText;
+        sizeElem.textContent = formatRepoSize(size);
 
         container.appendChild(sizeElem);
     }
